@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: datascraper_development
+  database: learning_platform
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -55,7 +55,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: datascraper_test
+  database: learning_platform_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: datascraper_production
-  username: datascraper
-  password: <%= ENV["DATASCRAPER_DATABASE_PASSWORD"] %>
+  database: learning_platform_production
+  username: learning_platform
+  password: <%= ENV["LEARNING_PLATFORM_DATABASE_PASSWORD"] %>
